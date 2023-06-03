@@ -29,3 +29,8 @@ Using dbt we transform this data into dimensions and facts.
 | source     	| vw_productsubcategory       	| view  	|
 | source     	| vw_stateprovince            	| view  	|
 
+## Dimensional Modeling 101
+To understand Kimball’s approach to data modeling, we should begin by talking about the star schema. The star schema is a particular way of organizing data for analytical purposes. It consists of two types of tables:
+- A fact table, which acts as the primary table for the schema. A fact table contains the primary measurements, metrics, or ‘facts’ of a business process.
+- Many dimension tables associated with the fact table. Each dimension table contains ‘dimensions’ — that is, descriptive attributes of the fact table.
+  These dimensional tables are said to ‘surround’ the fact table, which is where the name ‘star schema’ comes from.
