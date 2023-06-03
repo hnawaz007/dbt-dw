@@ -40,4 +40,5 @@ To understand Kimball’s approach to data modeling, we should begin by talking 
 - A fact table, which acts as the primary table for the schema. A fact table contains the primary measurements, metrics, or ‘facts’ of a business process.
 - Many dimension tables associated with the fact table. Each dimension table contains ‘dimensions’ — that is, descriptive attributes of the fact table.
   These dimensional tables are said to ‘surround’ the fact table, which is where the name ‘star schema’ comes from.
+  
   ![image](star-schema-example1.png)
