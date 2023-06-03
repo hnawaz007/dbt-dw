@@ -1,7 +1,7 @@
 # dbt build a datawarehouse using dimensional modeling
 This is a dbt repo. We build a practical datawarehouse using Kimball dimensional model with dbt. 
 
-We use a transactional database, SQL Server, AdventureWorks(https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms) as our source. We extract and load data with an EL tool Airbyte(https://www.youtube.com/watch?v=2FvMa7vaxDY&t).
+We use a transactional database, SQL Server, [AdventureWorks](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms) as our source. We extract and load data with an EL tool [Airbyte](https://www.youtube.com/watch?v=2FvMa7vaxDY&t).
 
 Using dbt we transform this data into dimensions and facts. 
 
