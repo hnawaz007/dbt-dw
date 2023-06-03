@@ -39,6 +39,11 @@ Using dbt we transform this data into dimensions and facts.
 To understand Kimball’s approach to data modeling, we should begin by talking about the star schema. The star schema is a particular way of organizing data for analytical purposes. It consists of two types of tables:
 - A fact table, which acts as the primary table for the schema. A fact table contains the primary measurements, metrics, or ‘facts’ of a business process.
 - Many dimension tables associated with the fact table. Each dimension table contains ‘dimensions’ — that is, descriptive attributes of the fact table.
-  These dimensional tables are said to ‘surround’ the fact table, which is where the name ‘star schema’ comes from.
-  
-  ![image](star-schema-example1.png)
+
+## Advantages of Dimensional Modelling
+- Dimensional data modeling enables users to easily access data through simple queries, reducing the time and effort required to retrieve and analyze data.
+- The simple structure of dimensional data modeling allows for faster query performance, particularly when compared to relational data models.
+- Dimensional data modeling allows for more flexible data analysis, as users can quickly and easily explore relationships between data.
+- Dimensional data modeling can improve data quality by reducing redundancy and inconsistencies in the data.
+- Dimensional data modeling uses simple, intuitive structures that are easy to understand, even for non-technical users.
+  These dimensional tables 'surround' the fact table, which is where the name 'star schema' comes from.
