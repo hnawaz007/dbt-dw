@@ -16,4 +16,4 @@ source	vw_salesreason	view
 source	vw_salesterritory	view
 source	vw_productsubcategory	view
 source	vw_stateprovince	view
-![image](https://github.com/hnawaz007/dbt-dw/assets/66388243/44273a80-3c99-4b71-aa09-bc7547da810c)
+
