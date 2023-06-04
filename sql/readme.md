@@ -1,5 +1,5 @@
 # SQL Server table and views used as the source for data ingestion
-Below is the complete list of table and views used as our source for the dbt proejct. 
+Below is the complete list of table and views used as our source for the dbt proejct. Views SQL Script are available in this folder.
 
 We use a transactional database, SQL Server, [AdventureWorks2019](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms) as our source. We extract and load data with an EL tool [Airbyte](https://www.youtube.com/watch?v=2FvMa7vaxDY&t).
 
