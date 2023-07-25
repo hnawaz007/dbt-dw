@@ -12,7 +12,15 @@ select
     stg_person.numbercarsowned, 
     stg_person.totalchildren, 
     stg_person.birthdate, 
-    stg_person.datefirstpurchase
+    stg_person.datefirstpurchase,
+    stg_address.city,
+    stg_stateprovince.statprovincename,
+    stg_address.postalcode,
+    stg_address.addressline1,
+    stg_address.addressline2
 from {{ ref('stg_customer') }}
 left join {{ ref('stg_person') }} on stg_customer.personid = stg_person.businessentityid
-left join {{ ref('stg_store') }}on stg_customer.storeid = stg_store.businessentityid
+left join {{ ref('stg_entityaddress') }} on stg_entityaddress.businessentityid = stg_person.businessentityid
+left join {{ ref('stg_address') }} on stg_address.addressid = stg_entityaddress.addressid
+left join {{ ref('stg_stateprovince') }} on stg_stateprovince.stateprovinceid = stg_address.stateprovinceid
+where persontype = 'IN'
