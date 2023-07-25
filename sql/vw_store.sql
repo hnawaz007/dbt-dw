@@ -13,7 +13,7 @@ Create View [dbo].[vw_store]
 AS
 
 SELECT  [BusinessEntityID]
-      ,cast([Name] as varchar(50)) AS StatProvinceName
+      ,cast([Name] as varchar(50)) AS StoreName
       ,[SalesPersonID]
       ,[Demographics]
       ,[rowguid]
