@@ -12,9 +12,7 @@ select
     stg_person.numbercarsowned, 
     stg_person.totalchildren, 
     stg_person.birthdate, 
-    stg_person.datefirstpurchase,
-    stg_store.businessentityid as storebusinessentityid,
-    stg_store.storename
+    stg_person.datefirstpurchase
 from {{ ref('stg_customer') }}
 left join {{ ref('stg_person') }} on stg_customer.personid = stg_person.businessentityid
 left join {{ ref('stg_store') }}on stg_customer.storeid = stg_store.businessentityid
