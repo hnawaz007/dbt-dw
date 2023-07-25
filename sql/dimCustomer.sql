@@ -13,8 +13,9 @@ select
     stg_person.totalchildren, 
     stg_person.birthdate, 
     stg_person.datefirstpurchase,
+    stg_countryregion.countryregionname as country,
     stg_address.city,
-    stg_stateprovince.statprovincename,
+    stg_stateprovince.statprovincename as state,
     stg_address.postalcode,
     stg_address.addressline1,
     stg_address.addressline2
@@ -23,4 +24,5 @@ left join {{ ref('stg_person') }} on stg_customer.personid = stg_person.business
 left join {{ ref('stg_entityaddress') }} on stg_entityaddress.businessentityid = stg_person.businessentityid
 left join {{ ref('stg_address') }} on stg_address.addressid = stg_entityaddress.addressid
 left join {{ ref('stg_stateprovince') }} on stg_stateprovince.stateprovinceid = stg_address.stateprovinceid
+left join {{ ref('stg_countryregion') }} on stg_countryregion.countryregioncode = stg_stateprovince.countryregioncode
 where persontype = 'IN'
