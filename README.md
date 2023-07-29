@@ -34,6 +34,7 @@ Using dbt we transform this data into dimensions and facts.
 | source     	| vw_salesterritory           	| view  	|
 | source     	| vw_productsubcategory       	| view  	|
 | source     	| vw_stateprovince            	| view  	|
+| source     	| vw_salesorderheader          	| view  	|
 
 ## Dimensional Modeling 101
 To understand Kimball’s approach to data modeling, we should begin by talking about the star schema. The star schema is a particular way of organizing data for analytical purposes. It consists of two types of tables:
