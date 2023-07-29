@@ -21,6 +21,7 @@ Using dbt we transform this data into dimensions and facts.
 | schemaname 	| tablename                   	| type  	|
 |------------	|-----------------------------	|-------	|
 | source     	| address                     	| table 	|
+| source     	| businessentityaddress        	| table 	|
 | source     	| customer                    	| table 	|
 | source     	| salesorderdetail            	| table 	|
 | source     	| salesorderheadersalesreason 	| table 	|
