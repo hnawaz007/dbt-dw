@@ -53,4 +53,4 @@ To understand Kimball’s approach to data modeling, we should begin by talking 
   These dimensional tables 'surround' the fact table, which is where the name 'star schema' comes from.
 
   ## DBT Completed DAG
-  ![image](dbtDags.png)
+  ![image](dbtDAGs.png)
