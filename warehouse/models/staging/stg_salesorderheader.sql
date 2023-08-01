@@ -1,20 +1,22 @@
 with source as (
 
-    select * from {{ source('src_postgres', 'salesorderheader') }}
+    select * from {{ source('src_postgres', 'vw_salesorderheader') }}
 ),
 renamed as (
 
     select 
         status,
+        onlineorderflag,
         taxamt,
+        purchaseordernumber,
         "Comment", --First letter is uppercase therefore in double quoutes
-        duedate,
+        duedate::timestamp AS duedate,
         freight,
         rowguid,
-        shipdate,
+        shipdate::timestamp AS shipdate,
         subtotal,
         totaldue,
-        orderdate,
+        orderdate::timestamp AS orderdate,
         customerid,
         territoryid,
         creditcardid,

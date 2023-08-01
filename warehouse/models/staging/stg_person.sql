@@ -12,11 +12,18 @@ renamed as (
         firstname,
         middlename,
         persontype,
-        demographics,
         modifieddate,
         emailpromotion,
         businessentityid,
-        additionalcontactinfo
+        houseownerflag, 
+        occupation, 
+        maritalstatus, 
+        commutedistance, 
+        education, 
+        numbercarsowned, 
+        totalchildren, 
+        birthdate, 
+        datefirstpurchase
     from source
 )
 

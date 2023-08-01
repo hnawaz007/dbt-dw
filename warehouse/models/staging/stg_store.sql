@@ -7,10 +7,10 @@ renamed as (
     select 
         rowguid,
         demographics,
+        storename,
         modifieddate,
         salespersonid,
-        businessentityid,
-        statprovincename
+        businessentityid
     from source
 )
 

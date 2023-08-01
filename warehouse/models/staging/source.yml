@@ -20,3 +20,5 @@ sources:
       - name: vw_salesterritory
       - name: vw_stateprovince
       - name: vw_store
+      - name: vw_salesorderheader
+      - name: businessentityaddress
