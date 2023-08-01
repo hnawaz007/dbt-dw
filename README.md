@@ -51,3 +51,6 @@ To understand Kimball’s approach to data modeling, we should begin by talking 
 - Dimensional data modeling can improve data quality by reducing redundancy and inconsistencies in the data.
 - Dimensional data modeling uses simple, intuitive structures that are easy to understand, even for non-technical users.
   These dimensional tables 'surround' the fact table, which is where the name 'star schema' comes from.
+
+  ## DBT Completed DAG
+  ![image](dbtDags.png)
