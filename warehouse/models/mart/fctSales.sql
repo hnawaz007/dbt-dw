@@ -17,11 +17,10 @@ select
     stg_salesorderdetail.salesorderdetailid,
     stg_salesorderdetail.unitprice,
     stg_salesorderdetail.orderqty,
-    (unitprice * orderqty) as revenue,
     linetotal as salesamount,
     case when unitpricediscount > 0
-        then (unitprice * orderqty) * unitpricediscount 
-        else (unitprice * orderqty)
+        then (linetotal * unitpricediscount) * unitpricediscount 
+        else (linetotal)
         end as netrevenue,
     stg_salesorderheader.taxamt 
 from {{ ref('stg_salesorderdetail') }}
