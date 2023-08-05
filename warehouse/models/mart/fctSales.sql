@@ -19,7 +19,7 @@ select
     stg_salesorderdetail.orderqty,
     linetotal as salesamount,
     case when unitpricediscount > 0
-        then (linetotal * unitpricediscount) * unitpricediscount 
+        then (linetotal * unitpricediscount) 
         else (linetotal)
         end as netrevenue,
     stg_salesorderheader.taxamt 
