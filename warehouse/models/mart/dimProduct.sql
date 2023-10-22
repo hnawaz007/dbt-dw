@@ -6,6 +6,7 @@ select
     stg_product.color,
     stg_product.daystomanufacture,
 	stg_product.safetystocklevel,
+    stg_product.standardcost,
     stg_productsubcategory.productsubcategory as product_subcategory_name,
     stg_productcategory.productcategory as product_category_name,
     stg_product.sellstartdate,

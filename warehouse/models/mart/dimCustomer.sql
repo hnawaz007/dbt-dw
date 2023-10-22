@@ -9,6 +9,7 @@ select
     stg_person.maritalstatus, 
     stg_person.commutedistance, 
     stg_person.education, 
+    --stg_person.gender,
     stg_person.numbercarsowned, 
     stg_person.totalchildren, 
     stg_person.birthdate, 
@@ -26,3 +27,4 @@ left join {{ ref('stg_address') }} on stg_address.addressid = stg_entityaddress.
 left join {{ ref('stg_stateprovince') }} on stg_stateprovince.stateprovinceid = stg_address.stateprovinceid
 left join {{ ref('stg_countryregion') }} on stg_countryregion.countryregioncode = stg_stateprovince.countryregioncode
 where persontype = 'IN'
+and addresstypeid = 2

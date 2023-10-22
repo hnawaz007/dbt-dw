@@ -1,23 +1,23 @@
 version: 2
 
 models:
-  - name: dimAddress
+  - name: dimaddress
     description: contains address information for the customers.
 
-  - name: dimCustomer
+  - name: dimcustomer
     description: contains customers details for company.
 
-  - name: dimOrderStatus
+  - name: dimorderstatus
     description: contains order status details.
 
-  - name: dimProduct
+  - name: dimproduct
     description: contains product information and product hierarchy.
 
-  - name: dimTerritory
+  - name: dimterritory
     description: contains sales territory details
 
-  - name: dimDate
+  - name: dimdate
     description: date diemension for datatime analysis
 
-  - name: fctSales
+  - name: fctsales
     description: contains sales transaction across dims included in this data model.

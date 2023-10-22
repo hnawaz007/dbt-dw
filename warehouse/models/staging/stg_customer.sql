@@ -1,6 +1,6 @@
 with source as (
 
-    select * from {{ source('src_postgres', 'customer') }}
+    select * from {{ source('src_postgres', 'Customer') }}
 ),
 renamed as (
 

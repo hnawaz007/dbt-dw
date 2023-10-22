@@ -6,9 +6,12 @@ sources:
     database: adventureworks
 
     tables:
-      - name: address
-      - name: customer
-      - name: salesorderdetail
+      - name: vw_address
+        identifier: address
+      - name: Customer
+        identifier: customer
+      - name: SalesOrderDetail
+        identifier: salesorderdetail
       - name: salesorderheader
       - name: salesorderheadersalesreason
       - name: vw_countryregion
@@ -21,4 +24,6 @@ sources:
       - name: vw_stateprovince
       - name: vw_store
       - name: vw_salesorderheader
-      - name: businessentityaddress
+      - name: BusinessEntityAddress
+        identifier: businessentityaddress
+  
