@@ -1,4 +1,4 @@
-Welcome to your new dbt project! This project is housed on a docker container. You can check the "airflow-sql-airflow-worker-1" container under following /opt/dbt directory.
+Welcome to your new dbt project! This project is housed on a docker container. You can check the "airflow-sql-airflow-worker-1" container. dbt project is under the following /opt/dbt directory.
 
 ### You can issue following commands to confirm project is functional on docker.
 
