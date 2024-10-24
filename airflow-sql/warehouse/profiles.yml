@@ -1,0 +1,14 @@
+warehouse:
+  outputs:
+
+    dev:
+      type: postgres
+      threads: 4
+      host: 192.168.1.39
+      port: 5432
+      user: "{{ env_var('PGUID') }}"
+      pass: "{{ env_var('PGPASS') }}"
+      dbname: adventureworks
+      schema: public
+
+  target: dev

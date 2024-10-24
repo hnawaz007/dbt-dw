@@ -1,0 +1,58 @@
+path/to/profiles.yml,target=/root/.dbt/ 
+
+https://airflow.apache.org/docs/docker-stack/build.html
+https://airflow.apache.org/docs/docker-stack/build.html
+
+sudo: no tty present and no askpass program specified
+
+USER root
+RUN whoami
+RUN apt-get update
+RUN sudo apt-get install -y git
+RUN mkdir /opt/dbt
+RUN git clone https://github.com/hnawaz007/demo_dbt.git /opt/dbt
+# create non-root user
+RUN apt-get install sudo
+RUN echo "ros ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers
+ENV USERNAME ros 
+RUN adduser --ingroup sudo --disabled-password --gecos "" --shell /bin/bash --home /home/$USERNAME $USERNAME
+RUN bash -c 'echo $USERNAME:ros | chpasswd'
+ENV HOME /home/$USERNAME
+USER $USERNAME
+
+
+
+RUN whoami
+RUN apt-get update
+RUN apt-get update
+RUN apt-get install -y git
+RUN mkdir /opt/dbt
+RUN git clone https://github.com/hnawaz007/demo_dbt.git /opt/dbt
+
+
+
+docker exec -u 0 i -t {container_id/image_name} bash
+
+docker exec -u 0  -t airflow-git-airflow-webserver-1 bash
+
+chmod -R 775 /opt/dbt
+
+RUN chmod -R 777 /opt/dbt
+
+
+FROM apache/airflow:2.2.3
+
+RUN pip install dbt-postgres==1.2.0
+
+USER root
+RUN apt-get update
+RUN apt-get install sudo
+RUN sudo apt-get install -y git
+RUN mkdir /opt/dbt
+RUN chmod -R a+rwx /opt/dbt
+RUN git clone https://github.com/hnawaz007/demo_dbt.git /opt/dbt
+
+USER airflow
+
+https://stackoverflow.com/questions/21659637/how-to-fix-sudo-no-tty-present-and-no-askpass-program-specified-error
+RUN echo "myuser ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers

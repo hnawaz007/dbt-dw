@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: address
+    description: contains address information for the customers.
+
+  - name: customer
+    description: contains customers details for company.
+
+  - name: orderstatus
+    description: contains order status details.
+
+  - name: product
+    description: contains product information and product hierarchy.
+
+  - name: territory
+    description: contains sales territory details
+
+  - name: date
+    description: date diemension for datatime analysis
+
+  - name: sales
+    description: contains sales transaction across s included in this data model.

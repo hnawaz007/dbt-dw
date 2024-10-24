@@ -1,5 +1,4 @@
 import os
-
 from dagster import Definitions,ScheduleDefinition, define_asset_job
 from dagster_dbt import DbtCliResource
 

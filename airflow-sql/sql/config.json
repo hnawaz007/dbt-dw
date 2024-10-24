@@ -1,0 +1,8 @@
+{"product": [	{"id": "1", "dest_table": "stg_products", "src_sql": "select * from AdventureWorksDW2019.dbo.DimProduct"},
+				{"id": "2", "dest_table": "stg_productcategory","src_sql": "select * from AdventureWorksDW2019.dbo.DimProductCategory"},
+				{"id": "3", "dest_table": "stg_productsubcategory","src_sql": "select * from AdventureWorksDW2019.dbo.DimProductSubcategory"}
+			 ],
+ "customer": [
+				{"id": "1", "dest_table": "stg_Customer", "src_sql": "select * from AdventureWorksDW2019.dbo.DimCustomer"}
+				]
+}

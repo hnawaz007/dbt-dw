@@ -1,0 +1,8 @@
+[smtp]
+smtp_host = 192.168.1.39
+smtp_starttls = True
+smtp_ssl = False
+smtp_user = hnawaz@localmail.com
+smtp_password = aneela01
+smtp_port = 25
+smtp_mail_from = admin@localmail.com

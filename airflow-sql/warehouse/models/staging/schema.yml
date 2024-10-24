@@ -1,0 +1,308 @@
+version: 2
+models:
+  - name: stg_address
+    description: This model represents the stage address table for the dim address.
+      It serves as an intermediate table for loading and transforming address
+      data from the AdventureWorks source database. The table includes columns
+      such as city, rowguid, addressid, postalcode, addressline1, addressline2,
+      modifieddate, spatiallocation, and stateprovinceid. This data can be
+      further processed and loaded into the final dim address table for analysis
+      and reporting purposes.
+    columns:
+      - name: city
+        description: The name of the city where the address is located. This column
+          provides information about the geographical location of the address
+          and can be used for various analytical scenarios. For example, it can
+          be used to analyze customer distribution across different cities,
+          identify popular cities for business operations, or understand
+          regional trends in sales or customer behavior.
+      - name: rowguid
+        description: ""
+      - name: addressid
+        data_tests:
+          - unique
+          - not_null
+        description: ""
+      - name: postalcode
+        description: Zip Code
+      - name: addressline1
+        description: Address First Line
+      - name: addressline2
+        description: Address Second Line
+      - name: modifieddate
+        description: Address modified date
+      - name: spatiallocation
+        description: ""
+      - name: stateprovinceid
+        description: Foreign key for stateprovince
+        data_tests:
+          - relationships:
+              to: ref('stg_stateprovince')
+              field: stateprovinceid
+
+          
+
+  - name: stg_customer
+    columns:
+      - name: storeid
+        description: ""
+      - name: rowguid
+        description: ""
+      - name: personid
+        description: ""
+      - name: customerid
+        description: The primary key for this table
+        data_tests:
+          - unique
+          - not_null
+      - name: territoryid
+        description: ""
+      - name: modifieddate
+        description: ""
+      - name: accountnumber
+        description: ""
+
+  - name: stg_salesorderdetail
+    columns:
+      - name: orderqty
+        description: " "
+      - name: linetotal
+        description: " "
+      - name: productid
+        description: " "
+      - name: unitprice
+        description: " "
+      - name: modifieddate
+        description: " "
+      - name: salesorderid
+        description: " "
+        data_tests:
+          - not_null
+      - name: specialofferid
+        description: " "
+      - name: unitpricediscount
+        description: " "
+      - name: salesorderdetailid
+        description: The column is part of the primary key for this table
+        data_tests:
+          - not_null
+      - name: carriertrackingnumber
+        description: " "
+  - name: stg_salesorderheader
+    columns:
+      - name: status
+        description: " "
+      - name: taxamt
+        description: " "
+      - name: comment
+        description: " "
+      - name: duedate
+        description: " "
+      - name: freight
+        description: " "
+      - name: rowguid
+        description: " "
+      - name: shipdate
+        description: " "
+      - name: subtotal
+        description: " "
+      - name: totaldue
+        description: " "
+      - name: orderdate
+        description: " "
+      - name: customerid
+        description: " "
+      - name: territoryid
+        description: " "
+      - name: creditcardid
+        description: " "
+      - name: modifieddate
+        description: " "
+      - name: salesorderid
+        description: The primary key for this table
+        data_tests:
+          - unique
+          - not_null
+      - name: shipmethodid
+        description: " "
+      - name: salespersonid
+        description: " "
+      - name: currencyrateid
+        description: " "
+      - name: revisionnumber
+        description: " "
+      - name: billtoaddressid
+        description: " "
+      - name: shiptoaddressid
+        description: " "
+      - name: salesordernumber
+        description: " "
+      - name: creditcardapprovalcode
+        description: " "
+  - name: stg_countryregion
+    columns:
+      - name: modifieddate
+        description: " "
+      - name: countryregioncode
+        description: The primary key for this table
+        data_tests:
+          - unique
+          - not_null
+      - name: countryregionname
+        description: " "
+  - name: stg_product
+    columns:
+      - name: size
+        description: " "
+      - name: class
+        description: " "
+      - name: color
+        description: " "
+      - name: style
+        description: " "
+      - name: weight
+        description: " "
+      - name: rowguid
+        description: " "
+      - name: listprice
+        description: " "
+      - name: productid
+        description: The primary key for this table
+        data_tests:
+          - unique
+          - not_null
+      - name: productline
+        description: " "
+      - name: productname
+        description: " "
+      - name: sellenddate
+        description: " "
+      - name: modifieddate
+        description: " "
+      - name: reorderpoint
+        description: " "
+      - name: standardcost
+        description: " "
+      - name: productnumber
+        description: " "
+      - name: sellstartdate
+        description: " "
+      - name: productmodelid
+        description: " "
+      - name: discontinueddate
+        description: " "
+      - name: safetystocklevel
+        description: " "
+      - name: daystomanufacture
+        description: " "
+      - name: sizeunitmeasurecode
+        description: " "
+      - name: productsubcategoryid
+        description: " "
+      - name: weightunitmeasurecode
+        description: " "
+  - name: stg_person
+    columns:
+      - name: title
+        description: " "
+      - name: suffix
+        description: " "
+      - name: rowguid
+        description: " "
+      - name: lastname
+        description: " "
+      - name: firstname
+        description: " "
+      - name: middlename
+        description: " "
+      - name: persontype
+        description: " "
+      - name: demographics
+        description: " "
+      - name: modifieddate
+        description: " "
+      - name: emailpromotion
+        description: " "
+      - name: businessentityid
+        description: The primary key for this table
+        data_tests:
+          - unique
+          - not_null
+      - name: additionalcontactinfo
+        description: " "
+  - name: stg_salesterritory
+    columns:
+      - name: group
+        description: " "
+      - name: costytd
+        description: " "
+      - name: rowguid
+        description: " "
+      - name: salesytd
+        description: " "
+      - name: territoryid
+        description: The primary key for this table
+        data_tests:
+          - unique
+          - not_null
+      - name: costlastyear
+        description: " "
+      - name: modifieddate
+        description: " "
+      - name: saleslastyear
+        description: " "
+      - name: countryregioncode
+        description: " "
+      - name: salesterritoryname
+        description: " "
+  - name: stg_productsubcategory
+    columns:
+      - name: rowguid
+        description: " "
+      - name: modifieddate
+        description: " "
+      - name: productcategoryid
+        description: ""
+      - name: productsubcategory
+        description: " "
+      - name: productsubcategoryid
+        description: The primary key for this table
+        data_tests:
+          - unique
+          - not_null
+  - name: stg_stateprovince
+    columns:
+      - name: rowguid
+        description: " "
+      - name: territoryid
+        description: " "
+      - name: modifieddate
+        description: " "
+      - name: stateprovinceid
+        description: The primary key for this table
+        data_tests:
+          - unique
+          - not_null
+      - name: statprovincename
+        description: " "
+      - name: countryregioncode
+        description: " "
+      - name: stateprovincecode
+        description: " "
+  - name: stg_productcategory
+    description: This table stores product category data
+    columns:
+      - name: productcategoryid
+        description: The primary key for this table
+        data_tests:
+          - unique
+          - not_null
+      - name: productcategory
+        description: Productcategory label
+        data_tests:
+          - accepted_values:
+              values:
+                - Bikes
+                - Components
+                - Clothing
+                - Accessories
