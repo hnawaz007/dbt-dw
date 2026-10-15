@@ -1,0 +1,33 @@
+source: MSSQL
+target: POSTGRES
+
+defaults:
+  mode: full-refresh
+  target_options:
+    column_casing: lower   # matches sanitize_columns() in etl_pipeline.py (c.lower(), no snake_case underscores)
+
+streams:
+  Person.Address:
+    object: source.address
+    sql: |
+      SELECT AddressID, AddressLine1, AddressLine2, City, StateProvinceID,
+             PostalCode, SpatialLocation.STAsText() AS SpatialLocation,
+             rowguid, ModifiedDate
+      FROM [Person].[Address]
+  Sales.Customer:                     { object: source.customer }
+  Sales.SalesOrderDetail:             { object: source.salesorderdetail }
+  Sales.SalesOrderHeader:             { object: source.salesorderheader }
+  Sales.SalesOrderHeaderSalesReason:  { object: source.salesorderheadersalesreason }
+  Person.CountryRegion:               { object: source.countryregion }
+  dbo.vw_person:                      { object: source.person }
+  Production.Product:                 { object: source.product }
+  Production.ProductCategory:         { object: source.productcategory }
+  Production.ProductSubcategory:      { object: source.productsubcategory }
+  Sales.SalesReason:                  { object: source.salesreason }
+  Sales.SalesTerritory:               { object: source.salesterritory }
+  Person.StateProvince:               { object: source.stateprovince }
+  Sales.Store:                        { object: source.store }
+  Person.BusinessEntityAddress:       { object: source.businessentityaddress }
+
+env:
+  SLING_THREADS: 3

@@ -1,0 +1,415 @@
+{
+  "source": {
+    "host": "localhost",
+    "port": 1433,
+    "database": "AdventureWorks2019",
+    "username": "etl",
+    "password": "demopass",
+    "driver": "ODBC Driver 17 for SQL Server",
+    "trust_cert": true
+  },
+  "destination": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "adventureworks",
+    "schema": "source",
+    "username": "etl",
+    "password": "demopass"
+  },
+  "streams": {
+    "address": {
+      "enabled": true,
+      "sync_mode": "Full refresh | Overwrite",
+      "last_sync": "2026-07-12T19:01:36.552975",
+      "last_rows": null
+    },
+    "customer": {
+      "enabled": true,
+      "sync_mode": "Full refresh | Overwrite",
+      "last_sync": "2026-07-12T19:01:36.552975",
+      "last_rows": null
+    },
+    "salesorderdetail": {
+      "enabled": true,
+      "sync_mode": "Full refresh | Overwrite",
+      "last_sync": "2026-07-12T19:01:36.552975",
+      "last_rows": null
+    },
+    "salesorderheader": {
+      "enabled": true,
+      "sync_mode": "Full refresh | Overwrite",
+      "last_sync": "2026-07-12T19:01:36.552975",
+      "last_rows": null
+    },
+    "salesorderheadersalesreason": {
+      "enabled": true,
+      "sync_mode": "Full refresh | Overwrite",
+      "last_sync": "2026-07-12T19:01:36.552975",
+      "last_rows": null
+    },
+    "countryregion": {
+      "enabled": true,
+      "sync_mode": "Full refresh | Overwrite",
+      "last_sync": "2026-07-12T19:04:46.028459",
+      "last_rows": null
+    },
+    "person": {
+      "enabled": true,
+      "sync_mode": "Full refresh | Overwrite",
+      "last_sync": "2026-07-12T19:01:36.552975",
+      "last_rows": null
+    },
+    "product": {
+      "enabled": true,
+      "sync_mode": "Full refresh | Overwrite",
+      "last_sync": "2026-07-12T19:01:36.552975",
+      "last_rows": null
+    },
+    "productcategory": {
+      "enabled": true,
+      "sync_mode": "Full refresh | Overwrite",
+      "last_sync": "2026-07-12T19:01:36.552975",
+      "last_rows": null
+    },
+    "productsubcategory": {
+      "enabled": true,
+      "sync_mode": "Full refresh | Overwrite",
+      "last_sync": "2026-07-12T19:01:36.552975",
+      "last_rows": null
+    },
+    "salesreason": {
+      "enabled": true,
+      "sync_mode": "Full refresh | Overwrite",
+      "last_sync": "2026-07-12T19:01:36.552975",
+      "last_rows": null
+    },
+    "salesterritory": {
+      "enabled": true,
+      "sync_mode": "Full refresh | Overwrite",
+      "last_sync": "2026-07-12T19:01:36.552975",
+      "last_rows": null
+    },
+    "stateprovince": {
+      "enabled": true,
+      "sync_mode": "Full refresh | Overwrite",
+      "last_sync": "2026-07-12T19:01:36.552975",
+      "last_rows": null
+    },
+    "store": {
+      "enabled": true,
+      "sync_mode": "Full refresh | Overwrite",
+      "last_sync": "2026-07-12T19:01:36.552975",
+      "last_rows": null
+    },
+    "businessentityaddress": {
+      "enabled": true,
+      "sync_mode": "Full refresh | Overwrite",
+      "last_sync": "2026-07-12T19:01:36.552975",
+      "last_rows": null
+    }
+  },
+  "replication_frequency": "Manual",
+  "sync_running": false,
+  "current_run_id": null,
+  "history": [
+    {
+      "id": "b12c7af9",
+      "started": "2026-07-12T19:04:45.363456",
+      "finished": "2026-07-12T19:04:46.028459",
+      "status": "success",
+      "tables": [
+        "countryregion"
+      ],
+      "duration_s": 0.7,
+      "log_lines": 11
+    },
+    {
+      "id": "7054c671",
+      "started": "2026-07-12T19:01:30.850816",
+      "finished": "2026-07-12T19:01:36.552975",
+      "status": "success",
+      "tables": [
+        "address",
+        "customer",
+        "salesorderdetail",
+        "salesorderheader",
+        "salesorderheadersalesreason",
+        "countryregion",
+        "person",
+        "product",
+        "productcategory",
+        "productsubcategory",
+        "salesreason",
+        "salesterritory",
+        "stateprovince",
+        "store",
+        "businessentityaddress"
+      ],
+      "duration_s": 5.7,
+      "log_lines": 83
+    },
+    {
+      "id": "5c46c4ee",
+      "started": "2026-07-12T19:01:11.146634",
+      "finished": "2026-07-12T19:01:11.961657",
+      "status": "success",
+      "tables": [
+        "store"
+      ],
+      "duration_s": 0.8,
+      "log_lines": 12
+    },
+    {
+      "id": "a27fe4b6",
+      "started": "2026-07-12T18:36:34.992411",
+      "finished": "2026-07-12T18:36:35.941144",
+      "status": "success",
+      "tables": [
+        "store"
+      ],
+      "duration_s": 0.9,
+      "log_lines": 12
+    },
+    {
+      "id": "bdf633bf",
+      "started": "2026-07-12T18:35:58.529696",
+      "finished": "2026-07-12T18:36:06.171450",
+      "status": "success",
+      "tables": [
+        "address",
+        "customer",
+        "salesorderdetail",
+        "salesorderheader",
+        "salesorderheadersalesreason",
+        "countryregion",
+        "person",
+        "product",
+        "productcategory",
+        "productsubcategory",
+        "salesreason",
+        "salesterritory",
+        "stateprovince",
+        "store",
+        "businessentityaddress"
+      ],
+      "duration_s": 7.6,
+      "log_lines": 154
+    },
+    {
+      "id": "ff924a4a",
+      "started": "2026-07-12T18:11:04.001163",
+      "finished": "2026-07-12T18:11:04.836903",
+      "status": "success",
+      "tables": [
+        "countryregion"
+      ],
+      "duration_s": 0.8,
+      "log_lines": 12
+    },
+    {
+      "id": "7a5d5070",
+      "started": "2026-07-12T18:07:58.703267",
+      "finished": "2026-07-12T18:08:06.441751",
+      "status": "success",
+      "tables": [
+        "address",
+        "customer",
+        "salesorderdetail",
+        "salesorderheader",
+        "salesorderheadersalesreason",
+        "countryregion",
+        "person",
+        "product",
+        "productcategory",
+        "productsubcategory",
+        "salesreason",
+        "salesterritory",
+        "stateprovince",
+        "store",
+        "businessentityaddress"
+      ],
+      "duration_s": 7.7,
+      "log_lines": 154
+    },
+    {
+      "id": "33aa33fc",
+      "started": "2026-07-12T18:07:01.390410",
+      "finished": "2026-07-12T18:07:02.529751",
+      "status": "success",
+      "tables": [
+        "address"
+      ],
+      "duration_s": 1.1,
+      "log_lines": 12
+    },
+    {
+      "id": "35b1e9b3",
+      "started": "2026-06-08T18:23:56.285093",
+      "finished": "2026-06-08T18:24:01.514116",
+      "status": "success",
+      "tables": [
+        "person"
+      ],
+      "duration_s": 5.2,
+      "log_lines": 13
+    },
+    {
+      "id": "7bce05ca",
+      "started": "2026-06-08T18:09:53.621445",
+      "finished": "2026-06-08T18:10:28.883392",
+      "status": "success",
+      "tables": [
+        "address",
+        "customer",
+        "salesorderdetail",
+        "salesorderheader",
+        "salesorderheadersalesreason",
+        "countryregion",
+        "person",
+        "product",
+        "productcategory",
+        "productsubcategory",
+        "salesreason",
+        "salesterritory",
+        "stateprovince",
+        "store",
+        "businessentityaddress"
+      ],
+      "duration_s": 35.3,
+      "log_lines": 93
+    },
+    {
+      "id": "178ab58c",
+      "started": "2026-06-08T18:09:31.599027",
+      "finished": "2026-06-08T18:09:34.886691",
+      "status": "success",
+      "tables": [
+        "address"
+      ],
+      "duration_s": 3.3,
+      "log_lines": 14
+    },
+    {
+      "id": "cf800c4c",
+      "started": "2026-06-08T18:05:11.450182",
+      "finished": "2026-06-08T18:05:12.203378",
+      "status": "failed",
+      "tables": [
+        "address",
+        "customer",
+        "salesorderdetail",
+        "salesorderheader",
+        "salesorderheadersalesreason",
+        "countryregion",
+        "person",
+        "product",
+        "productcategory",
+        "productsubcategory",
+        "salesreason",
+        "salesterritory",
+        "stateprovince",
+        "store",
+        "businessentityaddress"
+      ],
+      "duration_s": 0.8,
+      "log_lines": 73
+    },
+    {
+      "id": "959dcaf1",
+      "started": "2026-06-08T18:03:11.734990",
+      "finished": "2026-06-08T18:03:12.429364",
+      "status": "failed",
+      "tables": [
+        "address",
+        "customer",
+        "salesorderdetail",
+        "salesorderheader",
+        "salesorderheadersalesreason",
+        "countryregion",
+        "person",
+        "product",
+        "productcategory",
+        "productsubcategory",
+        "salesreason",
+        "salesterritory",
+        "stateprovince",
+        "store",
+        "businessentityaddress"
+      ],
+      "duration_s": 0.7,
+      "log_lines": 73
+    },
+    {
+      "id": "a4e42463",
+      "started": "2026-06-08T18:02:18.747680",
+      "finished": "2026-06-08T18:02:19.427462",
+      "status": "failed",
+      "tables": [
+        "address"
+      ],
+      "duration_s": 0.7,
+      "log_lines": 73
+    },
+    {
+      "id": "ae7b5dac",
+      "started": "2026-06-08T17:58:45.209922",
+      "finished": "2026-06-08T17:58:45.918048",
+      "status": "failed",
+      "tables": [
+        "address"
+      ],
+      "duration_s": 0.7,
+      "log_lines": 73
+    },
+    {
+      "id": "5f10b7c6",
+      "started": "2026-06-08T17:58:22.045503",
+      "finished": "2026-06-08T17:58:22.755377",
+      "status": "failed",
+      "tables": [
+        "address",
+        "customer",
+        "salesorderdetail",
+        "salesorderheader",
+        "salesorderheadersalesreason",
+        "countryregion",
+        "person",
+        "product",
+        "productcategory",
+        "productsubcategory",
+        "salesreason",
+        "salesterritory",
+        "stateprovince",
+        "store",
+        "businessentityaddress"
+      ],
+      "duration_s": 0.7,
+      "log_lines": 73
+    },
+    {
+      "id": "e72eb395",
+      "started": "2026-05-23T15:00:13.668297",
+      "finished": "2026-05-23T15:00:13.715144",
+      "status": "failed",
+      "tables": [
+        "address",
+        "customer",
+        "salesorderdetail",
+        "salesorderheader",
+        "salesorderheadersalesreason",
+        "countryregion",
+        "person",
+        "product",
+        "productcategory",
+        "productsubcategory",
+        "salesreason",
+        "salesterritory",
+        "stateprovince",
+        "store",
+        "businessentityaddress"
+      ],
+      "duration_s": 0.0,
+      "log_lines": 1
+    }
+  ]
+}

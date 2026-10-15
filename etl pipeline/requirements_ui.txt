@@ -1,0 +1,15 @@
+# ETL Pipeline UI — dependencies
+# Install: pip install -r requirements_ui.txt
+
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+sqlalchemy>=2.0.0
+pyodbc>=5.0.0
+psycopg2-binary>=2.9.0
+pandas>=2.0.0
+pydantic>=2.0.0
+sling>=1.5
+connectorx>=0.4.5
+polars>=1.42.0
+adbc-driver-postgresql>=1.11.0
+pyarrow>=21.0.0
